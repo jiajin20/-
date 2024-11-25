@@ -1,0 +1,130 @@
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: 100vh;
+}
+.slide_bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+}
+.page_center {
+    position: absolute;
+    top: 80%;
+    display: flex;
+}
+.page {
+    width: 48px;
+    height: 48px;
+    border: 1px solid white;
+    border-radius: 25px;
+    background-color:rgb(179,179,179);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    z-index: 1;
+}
+.page:hover {
+    cursor: pointer;
+    background-color: rgba(112, 22, 216, 0.879);
+}
+.text {
+    z-index: 1;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+}
+.text div {
+    width: 100px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    border-radius: 20px;
+    opacity: 0.8;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+h1 {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgb(244, 244, 244);
+}
+p {
+    font-weight: bold;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    text-align: start;
+    color: aliceblue;
+    width:400px;
+}
+.text {
+    top: 25%;
+    left: 10%;
+    opacity: 0;
+    transition: 1s;
+}
+.text.active {
+    opacity: 1;
+    justify-content: flex-start;
+    animation: run 1s;
+}
+@keyframes run {
+    0% {
+        transform: scale(0.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+.item {
+    width: 240px;
+    height: 160px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    transition: 1s;
+    box-shadow: 10px 10px 10px white;
+}
+.item:nth-child(2) {
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);
+    box-shadow: none;
+    border-radius: 0px;
+}
+.item:nth-child(1) {
+    opacity: 0;
+}
+.item:nth-child(3) {
+    left: 50%;
+}
+.item:nth-child(4) {
+    left: 65%;
+}
+.item:nth-child(5) {
+    left: 80%;
+}
+.item:nth-child(6) {
+    left: 100%;
+}
